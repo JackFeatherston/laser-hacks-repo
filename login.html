@@ -15,7 +15,9 @@
       font-family: Arial, sans-serif;
       background: #f2f2f2;
       background-image: url("https://www.desertsun.com/gcdn/authoring/authoring-images/2024/08/16/NVIC/74832208007-irvine-valley-college-3.jpg?crop=1598,1197,x128,y0");
-      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -28,7 +30,7 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     .login-container h1 {
@@ -36,8 +38,6 @@
       text-align: center;
       color: #333;
     }
-
-
 
     .login-container input[type="email"],
     .login-container input[type="password"] {
@@ -58,6 +58,14 @@
       font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      width: 200px;
+    }
+
+    .button-group{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
     }
 
     .login-container button:hover {
@@ -96,7 +104,12 @@
     <form action="/login" method="POST">
       <input type="email" name="email" placeholder="Email" required />
       <input type="password" name="password" placeholder="Password" required />
-      <button type="submit">Login</button>
+      
+      <div class="button-group">
+        <button id="login-button" type="login">Login</button>
+        <button id="sign-up-button" type="sign-up">Sign up</button>
+      </div>
+
       <a href="#" class="link">Forgot Password?</a>
     </form>
   </div>

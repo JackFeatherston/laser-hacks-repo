@@ -40,7 +40,7 @@
       color: #333;
     }
 
-    .interest-container input[type="name"],
+    .interest-container input[type="text"],
     .interest-container input[type="email"],
     .interest-container input[type="password"],
     .interest-container select,
@@ -94,13 +94,13 @@
 </head>
 <body>
   <div class="interest-container">
-    <h1>Sign up</h1>
+    <h1 id="header1">Sign up</h1>
     
-    <form action="/login" method="GET">
-      <label for="user-info">Tell us about yourself!</label>
-      <input type="name" name="name" placeholder="Enter full name" required />
-      <input type="email" name="ivc-email" placeholder="Enter your IVC Email" required />
-      <input type="password" name="ivc-password" placeholder="Enter your password" required />
+    <form action="/login" method="GET" autocomplete="on">
+      <label for="interest-container">Tell us about yourself!</label>
+      <input type="text" id="name" name="name" placeholder="Enter full name" autocomplete="name" required />
+      <input type="email" id="ivc-email" name="ivc-email" placeholder="Enter your IVC Email" autocomplete="email" required />
+      <input type="password" id="ivc-password" name="ivc-password" placeholder="Enter your password" autocomplete="new-password" required />
 
       <!--Major Dropdown-->
       <div class="dropdown-select">
@@ -131,10 +131,10 @@
           <label for="student-type">Type of Student</label>
           <select name="student-type" id="student-type">
             <option value="" disabled selected>Select your year</option>
-            <option value="transfer">Transfer</option>
-            <option value="international">International</option>
-            <option value="non-traditional">Non-traditional</option>
-            <option value="other">other</option>
+            <option value="Transfer">Transfer</option>
+            <option value="International">International</option>
+            <option value="Non-traditional">Non-traditional</option>
+            <option value="Other">other</option>
           </select>
         </div>
       </div>
@@ -148,7 +148,7 @@
         <li><label><input type="checkbox" name="interests" value="birdwatching"> Bird Watching</label></li>
       </ul>      
 
-      <button type="submit">Submit</button>
+      <button id="submit" type="submit">Submit</button>
     </form>
 
     <div class="brand-name">
