@@ -63,7 +63,7 @@
     .interest-container button {
       width: 100%;
       padding: 12px;
-      background-color: blue;
+      background-color: #0000A5;
       border: none;
       border-radius: 6px;
       color: white;
@@ -89,23 +89,71 @@
       color: rgb(0, 71, 137);
       margin-top: 20px;
     }
-  
+
+    .button-group{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      padding: 12px;
+      margin: 10px 0 20px;
+      gap: 15px;
+    }
+
+    .button-group button{
+      margin-top: -10px;
+      margin-bottom: 50px;
+      width: 150px;
+    }
+
+    #back-button{
+      background-color: #bab7b7;
+    }
+
+    <!--Team Branding-->
+    .member-names{
+      text-align: center;
+    }
+
+    .member-names a:link{
+      color: rgb(0, 71, 137);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    .member-names a:visited{
+      color: rgb(0, 71, 137);
+      background-color: transparent;
+    }
+
+    .member-names a:hover{
+      color: blue;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .image-container{
+      width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 <body>
   <div class="interest-container">
     <h1 id="header1">Sign up</h1>
     
-    <form action="/login" method="GET" autocomplete="on">
-      <label for="interest-container">Tell us about yourself!</label>
-      <input type="text" id="name" name="name" placeholder="Enter full name" autocomplete="name" required />
-      <input type="email" id="ivc-email" name="ivc-email" placeholder="Enter your IVC Email" autocomplete="email" required />
-      <input type="password" id="ivc-password" name="ivc-password" placeholder="Enter your password" autocomplete="new-password" required />
+    <form>
+      <label for="name">Name & Email Address:</label>
+      <input type="text" id="name" name="name" placeholder="Enter full name" required />
+      <input type="email" id="ivc-email" name="ivc-email" placeholder="Enter your IVC Email" required />
+      <input type="password" id="ivc-password" name="ivc-password" placeholder="Enter your password" required />
 
       <!--Major Dropdown-->
       <div class="dropdown-select">
         <div class="major-select">
-          <label for="major">Major</label>
+          <label for="major">Major:</label>
           <select name="major" id="major">
             <option value="" disabled selected>Select your major</option>
             <option value="Biology">Biology</option>
@@ -116,43 +164,44 @@
 
         <!--Student Year Dropdown-->
         <div class="year-select">
-          <label for="year">Year</label>
+          <label for="year">Year:</label>
           <select name="year" id="year">
             <option value="" disabled selected>Select your year</option>
             <option value="1st">1st</option>
             <option value="2nd">2nd</option>
             <option value="3rd">3rd</option>
-            <option value="other">other</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
         <!--Student Type Dropdown-->
         <div class="type-select">
-          <label for="student-type">Type of Student</label>
+          <label for="student-type">Type of Student:</label>
           <select name="student-type" id="student-type">
             <option value="" disabled selected>Select your year</option>
             <option value="Transfer">Transfer</option>
             <option value="International">International</option>
             <option value="Non-traditional">Non-traditional</option>
-            <option value="Other">other</option>
+            <option value="Other">Other</option>
           </select>
         </div>
+      </div>     
+
+      <div class="button-group">
+        <button id="back-button">Back</button>
+        <button id="submit-button" type="submit">Submit</button>
       </div>
-
-      <!--Student Interest Multi Select-->
-      <ul class="interests-list">
-        <li><label><input type="checkbox" name="interests" value="volleyball"> Volleyball</label></li>
-        <li><label><input type="checkbox" name="interests" value="soccer"> Soccer</label></li>
-        <li><label><input type="checkbox" name="interests" value="guitar"> Guitar</label></li>
-        <li><label><input type="checkbox" name="interests" value="hackathons"> Hackathons</label></li>
-        <li><label><input type="checkbox" name="interests" value="birdwatching"> Bird Watching</label></li>
-      </ul>      
-
-      <button id="submit" type="submit">Submit</button>
     </form>
 
     <div class="brand-name">
-      <p>LaserTag @ Irvine Valley College</p>
+      <p id="laser-tag-branding">LaserTag @ Irvine Valley College</p>
+      
+      <div class="member-names">
+        <a href="https://www.linkedin.com/in/ryan-nguyen-cs88/" target="blank">Ryan Nguyen |</a>
+        <a href="https://www.linkedin.com/in/jack-featherston-896a9530a/" target="blank">Jack Featherson |</a>
+        <a href="https://www.linkedin.com/in/jeslyn-do-75216b357/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="blank">Raine Ng |</a>
+        <a href="https://www.linkedin.com/in/jeslyn-do-75216b357/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="blank"> Jeslyn Do</a>
+      </div>
     </div>
 
   </div>
