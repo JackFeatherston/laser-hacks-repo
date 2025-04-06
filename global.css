@@ -1,0 +1,239 @@
+:root
+{
+    --blue: rgb(23, 105, 226); 
+    --darkBlue: rgb(23, 83, 173); 
+    --lightBlue: rgb(126, 175, 247); 
+    --lightGray: rgb(234, 234, 234);
+    --darkGray: rgb(168, 168, 168);
+    --green: rgb(134, 180, 20); 
+    --red: rgba(255, 27, 27, 0.678); 
+}
+
+
+button
+{
+    border: none;
+    background: transparent; 
+}
+
+.blur-overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    backdrop-filter: blur(0.2rem); /* or just filter: blur() */
+    z-index: 10;
+    pointer-events: none; /* Allow interaction with other content */
+    display: none; 
+}
+
+.blur-overlay.active 
+{
+    display: block; 
+}
+
+
+.nav-menu
+{
+    position: fixed; 
+    top: 5rem; left: 0; right: 0; 
+    background-color: white; 
+    z-index: 800; 
+    width: 100%; 
+    height: 7rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    opacity: 85%; 
+
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    transition: all ease 0.2s; 
+    transform: translateY(-100%); 
+}
+
+.nav-menu.active 
+{
+    transform: translateY(0%); 
+}
+
+.nav-page-link
+{
+    position: relative; 
+    width: fit-content; 
+    height: fit-content;
+    padding: 0.5rem;  
+    font-size: 2rem; 
+    border: none; 
+    background-color: white; 
+}
+
+.nav-page-link.underline::before
+{
+    content: ''; 
+    position: absolute; 
+    left: 0; right: 0; bottom: 0; 
+    height: 0.2rem; 
+    background-color: var(--blue); 
+    transition: transform 200ms ease-in-out; 
+
+    transform: scaleX(0); 
+}
+
+.nav-page-link.underline:hover::before,
+.nav-page-link.underline:focus::before
+{
+    transform: scaleX(1); 
+}
+
+.nav-bar
+{
+    position: fixed; 
+    top: 0; left: 0; right: 0;
+    z-index: 999; 
+    width: 100%; 
+    height: 5rem; 
+    background-color: var(--blue); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.nav-btn
+{
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly;  
+    align-items: center; 
+    width: 4rem;  
+    height: 4rem; 
+    margin-left: 1rem;
+}
+
+.bar 
+{
+    width: 4rem; 
+    height: 0.3rem; 
+    background-color: white; 
+    transition: all ease 0.2s; 
+}
+
+#x1.x
+{
+    position: absolute; 
+    top: 50%; 
+    transform: rotate(45deg); 
+}
+
+#x2.x
+{
+    position: absolute; 
+    top: 50%; 
+    transform: rotate(-45deg); 
+}
+
+.title
+{
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; 
+}
+
+.profile-search-container
+{
+    display: flex; 
+    gap: 2rem;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.search-input
+{
+    height: 2rem;
+    border-radius: 0.5rem; 
+    border: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+}
+
+#search-btn
+{
+    color: white; 
+    font-size: 2rem;
+    padding: 0.5rem;
+    transition: all ease 0.2s; 
+    border-radius: 1rem 1rem 0 1rem; 
+}
+
+#search-btn:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.profile
+{
+    position: relative; 
+    width: 4rem; 
+    height: 4rem; 
+    padding: 0.5 rem; 
+    margin-right: 1rem;
+    transition: all ease 0.2s; 
+    border-radius: 1rem; 
+
+    display: flex; 
+}
+
+.profile:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.profile-icon
+{
+    font-size: 4rem; 
+}
+
+.profile-pop-up
+{
+    position: absolute; 
+    top: 5.5rem; 
+    right: 1rem; 
+    width: 15rem; 
+    padding: 0.5rem; 
+    font-size: 1.5rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    opacity: 0%; 
+    transform: translateY(75%); 
+    z-index: 50; 
+    background-color: white; 
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 1rem; 
+    align-items: center; 
+    transition: all ease 0.3s; 
+}
+
+.profile-pop-up.active 
+{
+    opacity: 100%; 
+    transform: translateY(0%); 
+}
+
+.footer  
+{
+    position: relative; 
+    top: 7rem; 
+    width: 100%; 
+    height: 10rem; 
+    background-color: var(--blue); 
+    z-index: 1; 
+}

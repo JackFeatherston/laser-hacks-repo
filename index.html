@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaserTag</title>
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css"> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     
+</head>
+<body>
+
+    <!--hiding above body, not shown to user-->
+    <div class="nav-menu">
+        <button class="nav-page-link underline" onclick="location.href='forums.html'">Forums</button>
+        <button class="nav-page-link underline" onclick="location.href='index.html'">Events</button>
+        <button class="nav-page-link underline" onclick="location.href='alumni.html'">Alumni</button>
+    </div>
+    <div class="nav-bar">
+        <!--Nav menu-->
+        <div class="nav-btn" onclick="navMenu()">
+            <div class="bar" id="x1"></div>
+            <div class="bar" id="x2"></div>
+        </div>
+        <!--TITLE-->
+        <h1 class="title" onclick="location.href='index.html'">LaserTag</h1>
+        <!--SEARCH BAR-->
+        <div class="profile-search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <ion-icon name="search-outline" id="search-btn"></ion-icon>
+            <button class="profile" onmouseover="profilePop()" onmouseout="profileHide()" onclick="location.href='profile.html'">
+                <ion-icon class="profile-icon" style="color: white" name="person-circle-outline"></ion-icon>
+            </button>
+        </div>
+        <!--PROFILE-->
+        
+        <div class="profile-pop-up">
+            <span>Your Name</span>
+        </div>
+        
+    </div>  
+
+    <div class="blur-overlay"></div>
+
+    <!--WRAPPER, start of website content excluding nav bar-->
+    <div class="wrapper">
+
+        <!--START OF UPCOMING EVENTS-->
+        <div class="event-container">
+            <h1 style="align-self: flex-start; margin-left: 3rem;">Upcoming Events</h1>
+
+            <!--will have to change all info to some sort of variable-->
+            <div class="event-card-container">
+                <!--Event Card 1-->
+                <div class="event-card" id="card1">
+                    <span id="card-title">Grass VB @ Great Park</span>
+                    <span id="post">Posted by @iluvlanpham</span>
+                    <span class="event-info"><b>Date:</b> 4/20/25</span>
+                    <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                    <span class="event-info"><b>Location:</b> Great Park</span>
+                    <button class="event-info-btn" onclick="location.href='eventInfo.html'">Click for more info</button> 
+                </div>
+                <!--Event Card 2-->
+                <div class="event-card" id="card2">
+                    <span id="card-title">Grass VB @ Great Park</span>
+                    <span id="post">Posted by @iluvlanpham</span>
+                    <span class="event-info"><b>Date:</b> 4/20/25</span>
+                    <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                    <span class="event-info"><b>Location:</b> Great Park</span>
+                    <button class="event-info-btn">Click for more info</button> 
+                </div>
+                <!--Event Card 3-->
+                <div class="event-card" id="card3">
+                    <span id="card-title">Grass VB @ Great Park</span>
+                    <span id="post">Posted by @iluvlanpham</span>
+                    <span class="event-info"><b>Date:</b> 4/20/25</span>
+                    <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                    <span class="event-info"><b>Location:</b> Great Park</span>
+                    <button class="event-info-btn">Click for more info</button> 
+                </div>
+
+                <button>
+                    <ion-icon name="shuffle-outline" class="shuffle-event-btn"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!--START OF YOUR EVENTS-->
+
+        <div class="your-events-container">
+            <h1 style="align-self: flex-start; margin-left: 3rem;">Your Events</h1>
+
+            <!--will have to change all info to some sort of variable-->
+            <div class="event-card-container" id="your-events">
+
+                <!--Event Card 1-->
+                <div class="event-card your-events" id="card1">
+                    <span id="card-title">Grass VB @ Great Park</span>
+                    <span id="post">Posted by @iluvlanpham</span>
+                    <span class="event-info"><b>Date:</b> 4/20/25</span>
+                    <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                    <span class="event-info"><b>Location:</b> Great Park</span>
+                    <button class="event-info-btn">Click for more info</button> 
+                </div>
+                <!--Event Card 2-->
+                <div class="event-card your-events" id="card2">
+                    <span id="card-title">Grass VB @ Great Park</span>
+                    <span id="post">Posted by @iluvlanpham</span>
+                    <span class="event-info"><b>Date:</b> 4/20/25</span>
+                    <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                    <span class="event-info"><b>Location:</b> Great Park</span>
+                    <button class="event-info-btn">Click for more info</button> 
+                </div>
+                <!--Event Card 3-->
+                <div class="event-card your-events" id="card3">
+                    <span id="card-title">Grass VB @ Great Park</span>
+                    <span id="post">Posted by @iluvlanpham</span>
+                    <span class="event-info"><b>Date:</b> 4/20/25</span>
+                    <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                    <span class="event-info"><b>Location:</b> Great Park</span>
+                    <button class="event-info-btn">Click for more info</button> 
+                </div>
+
+                <div class="arrow-btn-container">
+                    <button>
+                        <ion-icon name="chevron-back-circle-outline" class="arrow-btn"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="chevron-forward-circle-outline" class="arrow-btn"></ion-icon>
+                    </button>
+                </div>
+                
+
+                
+            </div>
+        </div>
+
+        
+        <span class="add-event-pop">Create an event!</span>
+        <button>
+            <ion-icon name="add-circle-outline" class="add-event-btn" onmouseover="addEventPop()" onmouseout="addEventHide()" onclick="location.href='createEvent.html'"></ion-icon>
+        </button>
+       
+        <div class="footer"></div>
+
+        <!--END OF WRAPPER-->
+    </div>
+
+</body>
+</html>

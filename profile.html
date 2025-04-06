@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaserTag - Profile</title>
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="global.css"> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!--hiding above body, not shown to user-->
+    <div class="nav-menu">
+        <button class="nav-page-link underline" onclick="location.href='forums.html'">Forums</button>
+        <button class="nav-page-link underline" onclick="location.href='index.html'">Events</button>
+        <button class="nav-page-link underline" onclick="location.href='alumni.html'">Alumni</button>
+    </div>
+    <div class="nav-bar">
+        <!--Nav menu-->
+        <div class="nav-btn" onclick="navMenu()">
+            <div class="bar" id="x1"></div>
+            <div class="bar" id="x2"></div>
+        </div>
+        <!--TITLE-->
+        <h1 class="title" onclick="location.href='index.html'">LaserTag</h1>
+        <!--SEARCH BAR-->
+        <div class="profile-search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <ion-icon name="search-outline" id="search-btn"></ion-icon>
+            <button class="profile" onmouseover="profilePop()" onmouseout="profileHide()" onclick="location.href='profile.html'">
+                <ion-icon class="profile-icon" style="color: white" name="person-circle-outline"></ion-icon>
+            </button>
+        </div>
+        <!--PROFILE-->
+        
+        <div class="profile-pop-up">
+            <span>Your Name</span>
+        </div>
+    </div>  
+
+    <div class="blur-overlay"></div>
+
+    <!--WRAPPER-->
+    <div class="wrapper">
+        <main class="content">
+        <!--LEFT SIDE-->
+            <div class="left-container">
+                <div class="pfp-and-info">
+                    <div class="pfp-and-sign-out">
+                        <ion-icon name="person-outline" class="pfp"></ion-icon>
+                        <button class="sign-out-btn">Sign Out</button>
+                    </div>
+                    
+                    <div class="info">
+                        <span>Name</span>
+                        <span>Major</span>
+                        <span>Year</span>
+                    </div>
+                </div>
+
+                <div class="interest-container">
+                    <h1>Interests</h1>
+                    <ul>
+                        <li>asdfsd</li>
+                        <li>asdfkjkd</li>
+                        <li>jkaldsf</li>
+                        <li>kasjdfhaklj</li>
+                    </ul>
+                </div>
+            </div>
+
+        <!--RIGHT SIDE-->
+            <div class="right-container">
+                <h1>Your Events</h1>
+                <div class="card-container">
+                <!--Event Card 1-->
+                    <div class="event-card" id="card1">
+                        <span id="card-title">Grass VB @ Great Park</span>
+                        <span id="post">Posted by @iluvlanpham</span>
+                        <span class="event-info"><b>Date:</b> 4/20/25</span>
+                        <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                        <span class="event-info"><b>Location:</b> Great Park</span>
+                        <button class="event-info-btn">Click for more info</button> 
+                        <button class="remove-event-btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                <!--Event Card 2-->
+                    <div class="event-card" id="card2">
+                        <span id="card-title">Grass VB @ Great Park</span>
+                        <span id="post">Posted by @iluvlanpham</span>
+                        <span class="event-info"><b>Date:</b> 4/20/25</span>
+                        <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                        <span class="event-info"><b>Location:</b> Great Park</span>
+                        <button class="event-info-btn">Click for more info</button> 
+                        <button class="remove-event-btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                <!--Event Card 3-->
+                    <div class="event-card" id="card3">
+                        <span id="card-title">Grass VB @ Great Park</span>
+                        <span id="post">Posted by @iluvlanpham</span>
+                        <span class="event-info"><b>Date:</b> 4/20/25</span>
+                        <span class="event-info"><b>Time:</b> 4:00 PM</span>
+                        <span class="event-info"><b>Location:</b> Great Park</span>
+                        <button class="event-info-btn">Click for more info</button> 
+                        <button class="remove-event-btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+        <div class="footer profileFooter"></div>
+        <!--END OF WRAPPER-->
+    </div>
+</body>
+</html>

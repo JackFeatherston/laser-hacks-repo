@@ -1,0 +1,369 @@
+/*index, createEvent, and eventInfo html files rely on this*/
+@keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+@keyframes fadeIn
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*FOR INDEX -----------------------------------------------------------*/
+.wrapper
+{
+    height: fit-content; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.createEventWrapper
+{
+    height: fit-content; 
+    width: 100%; 
+    border: 4px solid black; 
+
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+/*Start of upcoming events*/
+
+.event-container
+{
+    position: relative; 
+    top: 8rem;  
+    width: 100%; 
+    height: fit-content; 
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem; 
+}
+
+.event-card-container
+{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    padding-top: 3rem; padding-bottom: 3rem; 
+    background-color: var(--lightGray); 
+    width: 100%; 
+    gap: 8rem; 
+}
+
+.event-card
+{
+    opacity: 0; 
+    transform: translateY(5rem); 
+    width: 20rem; 
+    height: 20rem; 
+    border-radius:3rem; 
+    padding: 2rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transition: all ease 0.2s; 
+
+    display: flex; 
+    flex-direction: column; 
+    animation: fadeSlideUp 1s ease-in-out forwards; 
+}
+
+.event-card:hover 
+{
+    scale: 1.1; 
+}
+
+#card1  
+{
+    background-color: var(--darkBlue); 
+}
+
+#card2
+{
+    background-color: var(--blue);
+    animation-delay: 0.25s; 
+}
+
+#card3
+{
+    background-color: var(--lightBlue);
+    animation-delay: 0.5s; 
+}
+
+#card-title
+{
+    font-size: 2rem;
+    font-weight: bold; 
+    color: white; 
+}
+
+#post
+{
+    color: rgb(211, 211, 211); 
+    margin-bottom: 1rem;
+}
+
+.event-info
+{
+    color: white; 
+    font-size: 1rem; 
+}
+
+.event-info-btn
+{
+    width: 100%;    
+    height: fit-content; 
+    color: white;
+    font-size: 1rem;
+    font-weight: bold; 
+    text-align: center; 
+    border: 0.2rem solid white; 
+    background-color: var(--blue); 
+    padding: 0.3rem;
+    margin-top: 1rem; 
+
+
+    transition: all ease 0.2s; 
+}
+
+.event-info-btn:hover 
+{
+    background-color: white; 
+    color: var(--blue); 
+}
+
+.shuffle-event-btn
+{
+    font-size: 4rem; 
+    color: black;   
+    transition: all ease 0.2s; 
+    border-radius: 1rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    margin-right: 4rem; 
+}
+
+.shuffle-event-btn:hover
+{
+    scale: 120%;
+}
+
+/*End of upcoming events*/
+
+/*Start of your events*/
+
+.your-events-container
+{
+    position: relative; 
+    top: 10rem; 
+    width: 100%; 
+    height: fit-content; 
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem; 
+}
+
+#your-events
+{
+    justify-content: space-between; 
+}
+
+.your-events 
+{
+    scale: 80%;     
+}
+
+.your-events:hover 
+{
+    scale: 90%; 
+}
+
+.arrow-btn-container
+{
+    margin-right: 5rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 1rem; 
+
+    display: flex; 
+
+}
+.arrow-btn
+{
+    position: relative; 
+    font-size: 4rem; 
+    transition: all ease 0.2s; 
+}
+
+.arrow-btn:hover 
+{
+    color: var(--blue); 
+}
+
+/*FLOATING ADD EVENT BUTTON*/
+.add-event-btn
+{
+    position: fixed; 
+    bottom: 2rem;
+    right: 4rem;
+    font-size: 5rem; 
+    color: var(--blue); 
+    transition: all ease 0.2s; 
+    border-radius: 2rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    background-color: white; 
+    z-index: 50; 
+}
+
+.add-event-btn:hover 
+{
+    scale:120%; 
+}
+
+.add-event-pop
+{
+    position: fixed;
+    bottom: 8rem; 
+    right: 1rem; 
+    height: fit-content; 
+    width: fit-content; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    padding: 0.7rem; 
+    background-color: var(--blue); 
+    color: white; 
+    transition: all ease 0.2s; 
+    border-radius: 1rem; 
+    transform: translateY(50%); 
+    z-index: 50; 
+}
+
+.add-event-pop.active 
+{
+    opacity: 100%; 
+    transform: translateY(0%); 
+}
+
+/*FOR createEvent HTML FILE ------------------------------------------------------------*/
+form
+{
+    position: relative; 
+    margin-top: 10rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    width: 30%; 
+    padding: 3rem; 
+    border-radius: 1rem;
+    animation: fadeIn 1.25s ease-in-out forwards; 
+
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+}
+
+/*FOR eventInfo HTML FILE ----------------------------------------------------------*/ 
+
+.eventInfoWrapper
+{
+    display: flex; 
+    flex-direction: column; 
+}
+
+.content
+{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;  
+    align-items: center; 
+    padding-bottom: 3rem;  
+}
+
+.description
+{
+    margin-top: 10rem; 
+    width: 30rem; 
+    opacity: 0; 
+    background-color: var(--lightGray);  
+    transform: translateY(50%);    
+    padding: 2rem; 
+    transition: all ease 0.2s; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    animation: fadeSlideUp 1s ease-in-out forwards; 
+    animation-delay: 0.25s; 
+
+}
+
+.description:hover 
+{
+    scale: 110%; 
+}
+
+.eventInfoCard
+{
+    margin-top: 10rem;    
+    width: fit-content;  
+}
+
+.eventInfoCard span
+{
+    font-size: 2rem; 
+}
+
+.decision-btn-container
+{
+    margin-top: 10rem; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 3rem; 
+    background-color: var(--lightGray); 
+    padding: 2rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transform: translateY(50%); 
+    opacity: 0; 
+    animation: fadeSlideUp 1s ease-in-out forwards; 
+    animation-delay: 0.5s; 
+
+}
+
+.decision-btn-container button 
+{
+    font-size: 2rem; 
+    width: fit-content; 
+    height: fit-content; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    padding: 1rem; 
+    font-weight: bold; 
+    color: white; 
+    transition: all ease 0.2s; 
+}
+
+.decision-btn-container button:hover
+{
+    scale: 110%; 
+}
+
+#attend-btn
+{
+    background-color: var(--green); 
+}
+
+#decline-btn
+{
+    background-color: var(--red); 
+}
+
+
+
+
+
+
