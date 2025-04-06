@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Set Up Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      background-image: url("https://www.desertsun.com/gcdn/authoring/authoring-images/2024/08/16/NVIC/74832208007-irvine-valley-college-3.jpg?crop=1598,1197,x128,y0");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .interest-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .interest-container h1,
+    .interest-container p {
+      margin-bottom: 25px;
+      text-align: center;
+      color: #333;
+    }
+
+    .interest-container input[type="name"],
+    .interest-container input[type="email"],
+    .interest-container select,
+    .dropdown-select select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .interest-container label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .interest-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: blue;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .interest-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .dropdown-select > div {
+      margin-bottom: 20px;
+    }
+
+    .dropdown-select select {
+      color: #333;
+    }
+
+    .brand-name p {
+      text-align: center;
+      color: rgb(0, 71, 137);
+      margin-top: 20px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="interest-container">
+    <h1>Sign up</h1>
+    
+    <form action="/login" method="GET">
+      <label for="user-info">Tell us about yourself!</label>
+      <input type="name" name="name" placeholder="Enter full name" required />
+      <input type="email" name="ivc-email" placeholder="Enter your IVC Email" required />
+
+      <div class="dropdown-select">
+        <div class="major-select">
+          <label for="major">Major</label>
+          <select name="major" id="major">
+            <option value="" disabled selected>Select your major</option>
+            <option value="Biology">Biology</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business">Business</option>
+          </select>
+        </div>
+
+        <div class="year-select">
+          <label for="year">Year</label>
+          <select name="year" id="year">
+            <option value="" disabled selected>Select your year</option>
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+
+        <div class="type-select">
+          <label for="student-type">Type of Student</label>
+          <select name="student-type" id="student-type">
+            <option value="" disabled selected>Select your year</option>
+            <option value="transfer">Transfer</option>
+            <option value="international">International</option>
+            <option value="non-traditional">Non-traditional</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="brand-name">
+      <p>LaserTag @ Irvine Valley College</p>
+    </div>
+
+  </div>
+</body>
+</html>

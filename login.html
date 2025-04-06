@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      background-image: url("https://www.desertsun.com/gcdn/authoring/authoring-images/2024/08/16/NVIC/74832208007-irvine-valley-college-3.jpg?crop=1598,1197,x128,y0");
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .login-container h1 {
+      margin-bottom: 25px;
+      text-align: center;
+      color: #333;
+    }
+
+
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: blue;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .login-container .link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: rgb(0, 71, 137);
+      text-decoration: none;
+    }
+
+    .login-container .link:hover {
+      text-decoration: underline;
+    }
+
+    .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    
+    <div class="image-container">
+      <!-- <img src="https://atep.ivc.edu/files/logo/IVC-Logo-245w.svg" alt="Placeholder image" width="300" height="200"> -->
+      <img src="lasertag.png" alt="Placeholder image" style="max-width: 100%; height: auto;">
+    </div>
+    
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <a href="#" class="link">Forgot Password?</a>
+    </form>
+  </div>
+</body>
+</html>
