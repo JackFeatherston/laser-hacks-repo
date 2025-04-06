@@ -15,11 +15,13 @@
       font-family: Arial, sans-serif;
       background: #f2f2f2;
       background-image: url("https://www.desertsun.com/gcdn/authoring/authoring-images/2024/08/16/NVIC/74832208007-irvine-valley-college-3.jpg?crop=1598,1197,x128,y0");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      width: 100vw;
     }
 
     .interest-container {
@@ -40,6 +42,7 @@
 
     .interest-container input[type="name"],
     .interest-container input[type="email"],
+    .interest-container input[type="password"],
     .interest-container select,
     .dropdown-select select {
       width: 100%;
@@ -97,7 +100,9 @@
       <label for="user-info">Tell us about yourself!</label>
       <input type="name" name="name" placeholder="Enter full name" required />
       <input type="email" name="ivc-email" placeholder="Enter your IVC Email" required />
+      <input type="password" name="ivc-password" placeholder="Enter your password" required />
 
+      <!--Major Dropdown-->
       <div class="dropdown-select">
         <div class="major-select">
           <label for="major">Major</label>
@@ -109,6 +114,7 @@
           </select>
         </div>
 
+        <!--Student Year Dropdown-->
         <div class="year-select">
           <label for="year">Year</label>
           <select name="year" id="year">
@@ -120,6 +126,7 @@
           </select>
         </div>
 
+        <!--Student Type Dropdown-->
         <div class="type-select">
           <label for="student-type">Type of Student</label>
           <select name="student-type" id="student-type">
@@ -131,6 +138,15 @@
           </select>
         </div>
       </div>
+
+      <!--Student Interest Multi Select-->
+      <ul class="interests-list">
+        <li><label><input type="checkbox" name="interests" value="volleyball"> Volleyball</label></li>
+        <li><label><input type="checkbox" name="interests" value="soccer"> Soccer</label></li>
+        <li><label><input type="checkbox" name="interests" value="guitar"> Guitar</label></li>
+        <li><label><input type="checkbox" name="interests" value="hackathons"> Hackathons</label></li>
+        <li><label><input type="checkbox" name="interests" value="birdwatching"> Bird Watching</label></li>
+      </ul>      
 
       <button type="submit">Submit</button>
     </form>
