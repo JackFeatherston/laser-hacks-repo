@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaserTag - Create an Event</title>
-
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="global.css"> 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>AlumniConnect</title>
 </head>
 <body>
-     <!--hiding above body, not shown to user-->
-     <div class="nav-menu">
+    
+    <!--hiding above body, not shown to user-->
+    <div class="nav-menu">
         <button class="nav-page-link underline" onclick="location.href='index.html'">Events</button>
-        <button class="nav-page-link underline" onclick="location.href='alumniConnect.html'">AlumniConnect</button>
+        <button class="nav-page-link underline" onclick="location.href='alumniConnect.html'">Alumni Connect</button>
     </div>
     <div class="nav-bar">
         <!--Nav menu-->
@@ -26,7 +26,7 @@
             <div class="bar" id="x2"></div>
         </div>
         <!--TITLE-->
-        <h1 class="title" onclick="location.href='index.html'">LaserTag</h1>
+        <h1 class="title" onclick="location.href='index.html'">Alumni Connect</h1>
         <!--SEARCH BAR-->
         <div class="profile-search-container">
             <input type="text" class="search-input" placeholder="Search...">
@@ -38,38 +38,17 @@
         <!--PROFILE-->
         
         <div class="profile-pop-up">
-            <span>Your Name</span> 
+            <span>Your Name</span>
         </div>
+        
     </div>  
 
-    <div class="blur-overlay"></div>
-
-    <!--START OF WRAPPER-->
-    <div class="createEventWrapper">
-        <form action="/submit-event" method="POST" class="event-form">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" placeholder="Name your event" required>
-          
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-          
-            <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required>
-          
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" required>
-
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="4" placeholder="Write a short description..." required></textarea>
-          
-            <button type="button" class="btn btn-primary">Create Event</button>
-        </form>
-
-        <div class="footer createEventFooter"></div>
-
-          
-          <!--END OF WRAPPER-->
+    <div class="chat-container">
+        <div class="chat-log">1</div>
+        <div class="chat-log">2</div>
+        <div class="chat-log">3</div>
     </div>
     
+
 </body>
 </html>
